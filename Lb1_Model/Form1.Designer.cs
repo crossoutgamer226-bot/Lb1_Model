@@ -239,15 +239,16 @@
             this.textBoxHistogram.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBoxHistogram.Size = new System.Drawing.Size(531, 337);
             this.textBoxHistogram.TabIndex = 20;
+            this.textBoxHistogram.TextChanged += new System.EventHandler(this.textBoxHistogram_TextChanged);
             // 
             // textBoxResearch
             // 
-            this.textBoxResearch.Location = new System.Drawing.Point(257, 402);
+            this.textBoxResearch.Location = new System.Drawing.Point(463, 371);
             this.textBoxResearch.Multiline = true;
             this.textBoxResearch.Name = "textBoxResearch";
             this.textBoxResearch.ReadOnly = true;
             this.textBoxResearch.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBoxResearch.Size = new System.Drawing.Size(100, 22);
+            this.textBoxResearch.Size = new System.Drawing.Size(507, 243);
             this.textBoxResearch.TabIndex = 21;
             // 
             // contextMenuStrip1
@@ -262,13 +263,13 @@
             this.chartHistogram.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chartHistogram.Legends.Add(legend1);
-            this.chartHistogram.Location = new System.Drawing.Point(810, 28);
+            this.chartHistogram.Location = new System.Drawing.Point(976, 28);
             this.chartHistogram.Name = "chartHistogram";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.chartHistogram.Series.Add(series1);
-            this.chartHistogram.Size = new System.Drawing.Size(403, 340);
+            this.chartHistogram.Size = new System.Drawing.Size(593, 586);
             this.chartHistogram.TabIndex = 23;
             this.chartHistogram.Text = "chart1";
             this.chartHistogram.Click += new System.EventHandler(this.chartHistogram_Click);
@@ -277,7 +278,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1257, 450);
+            this.ClientSize = new System.Drawing.Size(1581, 626);
             this.Controls.Add(this.chartHistogram);
             this.Controls.Add(this.textBoxResearch);
             this.Controls.Add(this.textBoxHistogram);

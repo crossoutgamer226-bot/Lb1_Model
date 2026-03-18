@@ -3,15 +3,18 @@ using System.Linq;
 
 public static class WeibullAnalyzer
 {
+    private static Random rnd = new Random();
+
     public static double[] GenerateWeibullSample(int N, double k, double lambda0)
     {
-        Random rnd = new Random();
         double[] sample = new double[N];
+
         for (int i = 0; i < N; i++)
         {
             double u = rnd.NextDouble();
             sample[i] = Math.Pow(-Math.Log(u) / lambda0, 1.0 / k);
         }
+
         return sample;
     }
 
@@ -25,6 +28,7 @@ public static class WeibullAnalyzer
     {
         int N = sample.Length;
         double D = 0.0;
+
         for (int i = 0; i < N; i++)
         {
             double Fn = (i + 1.0) / N;
@@ -32,6 +36,7 @@ public static class WeibullAnalyzer
             double diff = Math.Abs(Fn - F);
             if (diff > D) D = diff;
         }
+
         return D;
     }
 
